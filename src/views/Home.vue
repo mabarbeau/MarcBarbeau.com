@@ -1,18 +1,36 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <BaseHero/>
+    <section id="about">
+      <p class="h3">
+        Hello, I am Marc. Front End Developer based in the greater Seattle Area. <br>
+        I am passionate about building user interfaces that are appealing and engaging.
+      </p>
+    </section>
+    <section id="work">
+      <BaseCardList/>
+    </section>
+    <section id="contact">
+      <TheContactForm/>
+    </section>
+    <TheFooter/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+
+import BaseHero from '../components/BaseHero.vue';
+import BaseCardList from '../components/BaseCardList.vue';
+import TheContactForm from '../components/TheContactForm.vue';
+import TheFooter from '../components/TheFooter.vue';
 
 export default {
   name: 'home',
   components: {
-    HelloWorld,
+    BaseHero,
+    BaseCardList,
+    TheContactForm,
+    TheFooter,
   },
 };
 </script>
