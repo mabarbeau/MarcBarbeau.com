@@ -1,12 +1,12 @@
 <template>
-  <header>
+  <header class="grid">
+    <h1 class="h4">
+      Marc Barbeau
+      <small class="subtitle">
+        Front-End Developer
+      </small>
+    </h1>
     <nav>
-      <h1 class="h4">
-        Marc Barbeau
-        <small>
-          Front-End Developer
-        </small>
-      </h1>
       <ul>
         <li>
           <a class="btn" href="#">
@@ -42,22 +42,38 @@ export default {
 
 <style lang="scss" scoped>
 header{
+  padding-top: 10px;
+  padding-bottom: 5px;
   position: fixed;
-  display: block;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1;
   background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 h1{
+  position: relative;
+  left: -5px;
   display: inline-block;
+  margin: 0;
+  text-align: center;
 }
-
+small{
+  border-top: 1px solid #555;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: block;
+  text-transform: uppercase;
+  color: #555;
+}
 ul{
+  display: inline-block;
   list-style: none;
   text-align: center;
-  margin-top: 10px;
+  margin: 0;
   padding: 0;
   li{
     display: inline-block;
