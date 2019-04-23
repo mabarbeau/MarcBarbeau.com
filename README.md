@@ -1,5 +1,7 @@
 # marcbarbeau.com
 
+https://mabarbeau.github.io/marcbarbeau.com/
+
 ## Project setup
 ```
 npm install
