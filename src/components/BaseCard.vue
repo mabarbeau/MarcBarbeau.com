@@ -1,34 +1,29 @@
 <template>
   <article class="card">
-    <div class="card-image-wrap">
-      <img src="https://lorempixel.com/500/200/" alt="" class="card-image">
+    <div v-if="post.image_url && post.image_alt" class="card-image-wrap">
+      <img :src="post.image_url" :alt="post.image_alt" class="card-image">
     </div>
     <div class="card-info">
       <div class="card-row">
-        <h3 class="card-right subtitle">$1,000,000</h3>
-        <h2 class="h5 card-left">
+        <h3 v-if="post.subtitle" class="card-right subtitle">{{ post.subtitle }}</h3>
+        <h2 v-if="post.title" class="h5 card-left">
           <span class="ellipsis">
-            {{ title }}
+            {{ post.title }}
           </span>
         </h2>
       </div>
       <div class="card-row">
         <slot></slot>
       </div>
-      <div class="card-footer text-right">
-        <button type="button" name="button" class="btn btn--dense">
-          <span class="btn__label">
-            Foo
-          </span>
-        </button>
-        <button type="button" name="button" class="btn btn--dense btn--raised">
+      <div v-if="post.button_target && post.button_text" class="card-footer text-right">
+        <router-link :to="post.button_target" type="button" name="button" class="btn btn--dense">
           <i class="btn__icon material-icons">
             add
           </i>
           <span class="btn__label">
-            Bar
+            {{ post.button_text }}
           </span>
-        </button>
+        </router-link>
       </div>
     </div>
   </article>
@@ -37,7 +32,7 @@
 <script>
 export default {
   name: 'BaseCard',
-  props: ['title', 'body'],
+  props: ['post'],
 };
 </script>
 
@@ -61,7 +56,7 @@ export default {
   min-height: 100%;
   min-width: 100%;
   position: absolute;
-  /* background-color:  */
+  background-color: #444;
 }
 .card-image-wrap{
   position: relative;
@@ -74,7 +69,7 @@ export default {
   flex-grow: 1;
   flex-direction: column;
   padding: 10px;
-  /* border: 1px solid $border-color; */
+  border: 1px solid #ccc;
 }
 .card-footer{
   margin-top: auto;
