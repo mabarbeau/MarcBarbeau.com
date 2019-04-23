@@ -2,7 +2,7 @@
 
 Note this project is in active development. It will eventually replace https://www.marcbarbeau.com/
 
-Live @ https://mabarbeau.github.io/marcbarbeau.com/
+View on github https://mabarbeau.github.io/marcbarbeau.com/
 
 ## Project setup
 ```
