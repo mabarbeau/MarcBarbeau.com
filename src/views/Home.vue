@@ -1,33 +1,25 @@
 <template>
   <div class="home">
+
     <BaseHero/>
+
     <section id="about" class="grid">
-        <!--
-          <h2>About</h2>
-          <article>
-            <h3>Timeline</h3>
-            <dl class="timeline">
-              <dt>
-                First line of code
-              </dt>
-              <dd>2012</dd>
-              <dt>
-                First Website
-              </dt>
-              <dd>2013</dd>
-              <dt>
-                Graduated
-              </dt>
-              <dd>2013</dd>
-              <dt>
-                First Professinal Web Develoment Role
-              </dt>
-              <dd>2015</dd>
-            </dl>
-          </article>
-        -->
+        <div class="grid__inner">
+          <div class="grid__cell--span-6">
+            <h2>My Story</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
         <article>
-          <!-- <h3>Skills</h3> -->
+           <h3>Skills</h3>
           <div class="grid__inner">
             <div class="grid__cell">
               <h4>
@@ -80,33 +72,39 @@
             </div>
           </div>
         </article>
+
+        <BaseTimeline/>
     </section>
-    <!--
-      <section id="work">
-        <BaseCardList/>
-      </section>
-      <section id="contact">
-        <TheContactForm/>
-      </section>
-      <TheFooter/>
-    -->
+
+    <section id="work">
+      <BaseCardList/>
+    </section>
+
+    <section id="contact">
+      <TheContactForm/>
+    </section>
+
+    <TheFooter/>
+
   </div>
 </template>
 
 <script>
 
 import BaseHero from '../components/BaseHero.vue';
-// import BaseCardList from '../components/BaseCardList.vue';
-// import TheContactForm from '../components/TheContactForm.vue';
-// import TheFooter from '../components/TheFooter.vue';
+import BaseCardList from '../components/BaseCardList.vue';
+import BaseTimeline from '../components/BaseTimeline.vue';
+import TheContactForm from '../components/TheContactForm.vue';
+import TheFooter from '../components/TheFooter.vue';
 
 export default {
   name: 'home',
   components: {
     BaseHero,
-    // BaseCardList,
-    // TheContactForm,
-    // TheFooter,
+    BaseCardList,
+    BaseTimeline,
+    TheContactForm,
+    TheFooter,
   },
 };
 </script>
@@ -116,10 +114,10 @@ export default {
     display: block;
   }
   dt{
-    display: inline-block;
+    display: block;
   }
   dd{
-    display: inline-block;
+    display: block;
 
   }
 </style>
