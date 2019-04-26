@@ -9,7 +9,7 @@
     <nav>
       <ul>
         <li>
-          <router-link to="/#" class="btn">
+          <router-link to="/" class="btn">
             Home
           </router-link>
         </li>
