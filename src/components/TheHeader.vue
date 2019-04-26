@@ -9,22 +9,22 @@
     <nav>
       <ul>
         <li>
-          <a class="btn" href="#">
+          <a class="btn" href="/#">
             Home
           </a>
         </li>
         <li>
-          <a class="btn" href="#about">
+          <a class="btn" href="/#about">
             About
           </a>
         </li>
         <li>
-          <a class="btn" href="#work">
+          <a class="btn" href="/#work">
             Recent work
           </a>
         </li>
         <li>
-          <a class="btn" href="#contact">
+          <a class="btn" href="/#contact">
             Contact
           </a>
         </li>
