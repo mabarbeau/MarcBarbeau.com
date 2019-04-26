@@ -36,8 +36,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 84px);
-    padding-bottom: 80px;
+    padding: 80px 0;
   }
   .h3{
     margin-top: .5em;
