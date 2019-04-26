@@ -18,7 +18,7 @@
             About
           </a>
         </li>
-        <li>
+        <!-- <li>
           <a class="btn" href="/#work">
             Recent work
           </a>
@@ -27,7 +27,7 @@
           <a class="btn" href="/#contact">
             Contact
           </a>
-        </li>
+        </li> -->
       </ul>
     </nav>
   </header>

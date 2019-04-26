@@ -2,8 +2,9 @@
   <div class="home">
     <BaseHero/>
     <section id="about" class="grid">
-        <h2>About</h2>
-        <article>
+        <!--
+          <h2>About</h2>
+          <article>
             <h3>Timeline</h3>
             <dl class="timeline">
               <dt>
@@ -23,9 +24,10 @@
               </dt>
               <dd>2015</dd>
             </dl>
-        </article>
+          </article>
+        -->
         <article>
-          <h3>Skills</h3>
+          <!-- <h3>Skills</h3> -->
           <div class="grid__inner">
             <div class="grid__cell">
               <h4>
@@ -79,30 +81,32 @@
           </div>
         </article>
     </section>
-    <section id="work">
-      <BaseCardList/>
-    </section>
-    <section id="contact">
-      <TheContactForm/>
-    </section>
-    <TheFooter/>
+    <!--
+      <section id="work">
+        <BaseCardList/>
+      </section>
+      <section id="contact">
+        <TheContactForm/>
+      </section>
+      <TheFooter/>
+    -->
   </div>
 </template>
 
 <script>
 
 import BaseHero from '../components/BaseHero.vue';
-import BaseCardList from '../components/BaseCardList.vue';
-import TheContactForm from '../components/TheContactForm.vue';
-import TheFooter from '../components/TheFooter.vue';
+// import BaseCardList from '../components/BaseCardList.vue';
+// import TheContactForm from '../components/TheContactForm.vue';
+// import TheFooter from '../components/TheFooter.vue';
 
 export default {
   name: 'home',
   components: {
     BaseHero,
-    BaseCardList,
-    TheContactForm,
-    TheFooter,
+    // BaseCardList,
+    // TheContactForm,
+    // TheFooter,
   },
 };
 </script>
