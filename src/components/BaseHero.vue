@@ -1,16 +1,21 @@
 <template>
   <section class="hero">
     <div class="foreground">
-      <p class="h4">
-        Hello, I am Marc. Front End Developer based in the Seattle area. <br>
-        I am passionate about building eligant interfaces that are engaging and performant.
+      <img src="../assets/MarcBarbeau.jpeg" alt="Marc Barbeau" width="268" height="268">
+      <p>
+        <span class="h3">
+          Hello, I am Marc.
+        </span>
+        <span class="h4">
+          Front End Developer based in the Seattle area.
+        </span>
+        <span class="h5">
+          I am passionate about building eligant interfaces that are engaging and performant.
+        </span>
       </p>
-      <div class="right">
-        <img src="http://lorempixel.com/126/126/people/" alt="Marc Barbeau" width="126" height="126">
-        <a class="btn">
-          Learn more
-        </a>
-      </div>
+      <a class="btn" href="#about">
+        Learn more
+      </a>
     </div>
     <div class="backdrop"></div>
   </section>
@@ -27,17 +32,28 @@ export default {
     border-radius: 100%;
   }
   .hero{
+    position: relative;
     display: flex;
-    align-items: flex-end;
-    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 84px);
+    padding-bottom: 80px;
+  }
+  .h3{
+    margin-top: .5em;
+    margin-bottom: 0;
+  }
+  .h5{
+    margin-top: 0;
+    margin-bottom: .5em;
+    letter-spacing: .08em;
+    display: block;
   }
   .foreground{
-    background-color: white;
-    width: 100%;
-    padding: 20px 28px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #fff;
+    text-align: center;
+    padding: 50px 60px 25px 60px;
+    border: 1px solid #ddd;
   }
   .backdrop{
     z-index: -1;
