@@ -15,8 +15,8 @@
       <div class="card-row">
         <slot></slot>
       </div>
-      <div v-if="post.button_target && post.button_text" class="card-footer text-right">
-        <router-link :to="post.button_target" type="button" name="button" class="btn btn--dense">
+      <div v-if="button_target && post.button_text" class="card-footer text-right">
+        <router-link :to="button_target" type="button" name="button" class="btn btn--dense">
           <i class="btn__icon material-icons">
             add
           </i>
@@ -33,6 +33,11 @@
 export default {
   name: 'BaseCard',
   props: ['post'],
+  computed: {
+    button_target() {
+      return `/${this.post.slug}`;
+    },
+  },
 };
 </script>
 
