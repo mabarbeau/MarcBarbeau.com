@@ -13,9 +13,11 @@
           I am passionate about building eligant interfaces that are engaging and performant.
         </span>
       </p>
-      <a class="btn" href="#about">
-        Learn more
-      </a>
+      <div>
+        <a class="btn btn--unelevated" href="#about">
+          My Story
+        </a>
+      </div>
     </div>
     <div class="backdrop"></div>
   </section>
