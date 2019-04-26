@@ -9,25 +9,27 @@
     <nav>
       <ul>
         <li>
-          <a class="btn" href="/#">
+          <router-link to="/#" class="btn">
             Home
-          </a>
+          </router-link>
         </li>
         <li>
-          <a class="btn" href="/#about">
+          <router-link to="/#about" class="btn">
             About
-          </a>
+          </router-link>
         </li>
-        <!-- <li>
-          <a class="btn" href="/#work">
-            Recent work
-          </a>
-        </li>
-        <li>
-          <a class="btn" href="/#contact">
-            Contact
-          </a>
-        </li> -->
+        <!--
+          <li>
+            <router-link to="/#work" class="btn">
+              Recent work
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/#contact" class="btn">
+              Contact
+            </router-link>
+          </li>
+        -->
       </ul>
     </nav>
   </header>
