@@ -27,7 +27,7 @@ export default {
           image_url: 'https://lorempixel.com/500/200/',
           image_alt: 'Alt',
           button_text: 'More',
-          button_target: '/about',
+          button_target: '/design-system',
         },
         {
           id: 2,
@@ -37,7 +37,7 @@ export default {
           image_url: 'https://lorempixel.com/500/200/',
           image_alt: 'Alt',
           button_text: 'More',
-          button_target: '/about',
+          button_target: '/blogging',
         },
         {
           id: 3,
@@ -47,7 +47,7 @@ export default {
           image_url: 'https://lorempixel.com/500/200/',
           image_alt: 'Alt',
           button_text: 'More',
-          button_target: '/about',
+          button_target: '/vue',
         },
       ],
     };
