@@ -9,11 +9,32 @@
         Back
       </span>
     </a>
+    <div v-html="compiledMarkdown"></div>
   </div>
 </template>
 <script>
+
+import marked from 'marked';
+import axios from 'axios';
+
 export default {
   name: 'about',
   props: ['slug'],
+  data() {
+    return {
+      input: 'string',
+    };
+  },
+  created () {
+    axios.get('/markdown/test.md')
+      .then(response => (this.input = response.data))
+      .catch(error => (this.input = '## Error'))
+    ;
+  },
+  computed: {
+    compiledMarkdown() {
+      return marked(this.input, { sanitize: true });
+    },
+  },
 };
 </script>
