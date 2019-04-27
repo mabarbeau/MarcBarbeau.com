@@ -25,11 +25,11 @@ export default {
       input: 'string',
     };
   },
-  created () {
-    axios.get('/markdown/test.md')
-      .then(response => (this.input = response.data))
-      .catch(error => (this.input = '## Error'))
-    ;
+  created() {
+    axios
+      .get(`${this.$router.options.base}markdown/test.md`)
+      // eslint-disable-next-line
+      .then(response => (this.input = response.data));
   },
   computed: {
     compiledMarkdown() {
