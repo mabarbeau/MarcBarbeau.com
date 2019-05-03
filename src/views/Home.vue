@@ -96,16 +96,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-  dl{
-    display: block;
-  }
-  dt{
-    display: block;
-  }
-  dd{
-    display: block;
-
-  }
-</style>
