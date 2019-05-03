@@ -84,7 +84,6 @@
       <TheContactForm/>
     </section>
 
-    <TheFooter/>
 
   </div>
 </template>
@@ -95,7 +94,6 @@ import BaseHero from '../components/BaseHero.vue';
 import BaseCardList from '../components/BaseCardList.vue';
 import BaseTimeline from '../components/BaseTimeline.vue';
 import TheContactForm from '../components/TheContactForm.vue';
-import TheFooter from '../components/TheFooter.vue';
 
 export default {
   name: 'home',
@@ -104,7 +102,6 @@ export default {
     BaseCardList,
     BaseTimeline,
     TheContactForm,
-    TheFooter,
   },
 };
 </script>
