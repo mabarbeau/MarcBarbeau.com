@@ -1,24 +1,14 @@
 <template>
-  <div class="home">
+  <main class="home">
 
     <BaseHero/>
 
-    <section id="about" class="grid">
-        <div class="grid__inner">
-          <div class="grid__cell--span-6">
-            <h2>My Story</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
-        </div>
-        <article>
+    <section id="about">
+        <BaseJumbotron/>
+
+        <BaseTimeline/>
+
+        <article class="grid">
            <h3>Skills</h3>
           <div class="grid__inner">
             <div class="grid__cell">
@@ -73,7 +63,6 @@
           </div>
         </article>
 
-        <BaseTimeline/>
     </section>
 
     <section id="work">
@@ -84,8 +73,7 @@
       <TheContactForm/>
     </section>
 
-
-  </div>
+  </main>
 </template>
 
 <script>
@@ -93,7 +81,9 @@
 import BaseHero from '../components/BaseHero.vue';
 import BaseCardList from '../components/BaseCardList.vue';
 import BaseTimeline from '../components/BaseTimeline.vue';
+import BaseJumbotron from '../components/BaseJumbotron.vue';
 import TheContactForm from '../components/TheContactForm.vue';
+
 
 export default {
   name: 'home',
@@ -101,6 +91,7 @@ export default {
     BaseHero,
     BaseCardList,
     BaseTimeline,
+    BaseJumbotron,
     TheContactForm,
   },
 };
