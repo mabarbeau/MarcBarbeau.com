@@ -1,57 +1,32 @@
 <template>
-    <div class="grid">
-        <div class="grid__inner">
-            <div v-for="post in posts" :key="post.id" class="grid__cell">
-                <BaseCard :post="post">
-                  {{ post.body }}
-                </BaseCard>
-            </div>
-        </div>
-    </div>
+	<div class="grid">
+		<div v-if="posts" class="grid__inner">
+			<div v-for="post in posts" :key="post.id" class="grid__cell">
+				<BaseCard :post="post">
+					{{ post.body }}
+				</BaseCard>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
 import BaseCard from './BaseCard.vue';
+import axios from 'axios';
 
 export default {
-  name: 'BaseCardList',
-  components: { BaseCard },
-  data() {
-    return {
-      posts: [
-        {
-          id: 1,
-          slug: 'design-system',
-          title: 'Design system',
-          subtitle: 'Webpack | Sass',
-          body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-          image_url: 'https://lorempixel.com/500/200/',
-          image_alt: 'Alt',
-          button_text: 'More',
-        },
-        {
-          id: 2,
-          slug: 'blogging',
-          title: 'Blogging with Vue',
-          subtitle: 'Vue | Sass',
-          body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-          image_url: 'https://lorempixel.com/500/200/',
-          image_alt: 'Alt',
-          button_text: 'More',
-        },
-        {
-          id: 3,
-          slug: 'vue',
-          title: 'Why Vue is so fun',
-          subtitle: 'Vue',
-          body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-          image_url: 'https://lorempixel.com/500/200/',
-          image_alt: 'Alt',
-          button_text: 'More',
-        },
-      ],
-    };
-  },
-};
-
+	name: 'BaseCardList',
+	components: { BaseCard },
+	data() {
+		return {
+			posts: [],
+		};
+	},
+	created() {
+		axios
+			.get(`${this.$router.options.base}cards.json`)
+			// eslint-disable-next-line
+			.then(response => (this.posts = response.data));
+		}
+	};
 </script>
