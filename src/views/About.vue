@@ -1,6 +1,5 @@
 <template>
   <div class="about grid">
-    <h1>{{ slug }}</h1>
     <a @click="$router.go(-1)" type="button" name="button" class="btn">
       <i class="btn__icon material-icons">
         arrow_back
@@ -22,12 +21,12 @@ export default {
   props: ['slug'],
   data() {
     return {
-      input: 'string',
+      input: '',
     };
   },
-  created() {
+  mounted() {
     axios
-      .get(`${this.$router.options.base}markdown/test.md`)
+      .get(`${this.$router.options.base}markdown/${this.slug}.md`)
       // eslint-disable-next-line
       .then(response => (this.input = response.data));
   },
