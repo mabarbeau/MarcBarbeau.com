@@ -18,18 +18,16 @@
             About
           </router-link>
         </li>
-        <!--
-          <li>
-            <router-link to="/#work" class="btn">
-              Recent work
-            </router-link>
-          </li>
-          <li>
-            <router-link to="/#contact" class="btn">
-              Contact
-            </router-link>
-          </li>
-        -->
+        <li>
+          <router-link to="/#work" class="btn">
+            Recent work
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/#contact" class="btn">
+            Contact
+          </router-link>
+        </li>
       </ul>
     </nav>
   </header>
@@ -41,9 +39,9 @@ export default {
 };
 </script>
 
-
 <style lang="scss" scoped>
 header{
+  border-bottom: 2px solid #ccc;
   padding-top: 10px;
   padding-bottom: 5px;
   position: fixed;
