@@ -1,6 +1,6 @@
 <template>
   <form class="grid" action="#" method="post">
-    <form class="grid__inner" action="" method="post">
+    <div class="grid__inner">
       <div class="grid__cell--span-2">
         <label class="shown" for="firstname">First name</label>
         <input
@@ -51,7 +51,7 @@
           Submit
         </span>
       </button>
-    </form>
+    </div>
   </form>
 </template>
 
