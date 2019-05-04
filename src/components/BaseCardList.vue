@@ -1,5 +1,8 @@
 <template>
   <div class="grid">
+    <h2>
+      Recent Work
+    </h2>
     <div v-if="posts" class="grid__inner">
       <div v-for="post in posts" :key="post.id" class="grid__cell">
         <BaseCard :post="post">
