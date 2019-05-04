@@ -129,7 +129,7 @@ $mdc-typography-styles: mdc-typography-set-styles_(
   }
 }
 h1, h2, h3, h4, h5, h6{
-  margin: 1em 0 .25em 0;
+  margin: 0 0 .25em 0;
 }
 h1{
   @include mdc-typography('h1');

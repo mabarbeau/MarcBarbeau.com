@@ -103,7 +103,6 @@ export default {
 .timeline article{
   width: 50%;
   margin-bottom: 10em;
-  box-sizing: border-box;
   border-top: 4px solid #ccc;
   position: relative;
   &:after{
@@ -121,9 +120,6 @@ export default {
   padding: 3em 4em 2em 2em;
   position: relative;
   top: -6em;
-}
-h3{
-  margin-top: 0;
 }
 .timeline article:nth-child(2){
   margin-top: 15em;
