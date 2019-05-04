@@ -21,14 +21,6 @@ label{
 	display: block;
 	padding: 17px 17px;
 	width: 100%;
-	&[disabled],
-	fieldset[disabled] & {
-		cursor: 'not-allowed';
-		opacity: .75;
-	}
-	textarea{
-		height: auto;
-	}
 	&:focus {
 		outline: 0;
 		border-bottom-color: $primary-light;
@@ -46,10 +38,6 @@ label{
 			color: transparent;
 		}
 	}
-	&:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus{
-		-webkit-box-shadow: 0 0 0 1000px white inset !important;
-		-webkit-text-fill-color: black;
-	}
 	&[readonly]{
 		background-color: transparent;
 	}
@@ -63,60 +51,17 @@ label{
 }
 .select{
 	position: relative;
-	&::before{
+	&::after{
+		@extend .material-icons;
 		color: $black;
 		content: "arrow_drop_down";
-		font-family: 'Material Icons';
-		font-size: 24px;
-		line-height: 1;
-		position: relative;
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		height: 60px;
-		top: 28px;
-		margin-bottom: -60px;
-		padding-right: 15px;
-		-webkit-font-smoothing: antialiased;
-		text-rendering: optimizeLegibility;
-		-moz-osx-font-smoothing: grayscale;
-		font-feature-settings: 'liga';
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 7px;
 	}
 	select{
-		padding-right: 42px;
-	}
-}
-.select-multiple{
-	ul{
-		line-height: 1.5;
-		margin-bottom: 4px;
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-	li {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		background-color: $white;
-		border: 2px solid $gray-light;
-		border-top-width:0;
-		border-bottom-width:1px;
-		line-height: 60px;
-		margin: 0;
-		padding: 0 17px;
-		position: relative;
-		text-transform: capitalize;
-		&:last-child{
-			border-bottom-width: 2px;
-		}
-	}
-	i{
-		cursor: pointer;
-		color: $gray;
-		font-size: 16px;
-		line-height: 1;
-		right: 16px;
+		padding-right: 36px;
 	}
 }
 textarea, input, select {
