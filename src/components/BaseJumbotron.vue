@@ -20,13 +20,11 @@
 <style lang="scss" scoped>
 .jumbotron{
   margin-top: 5em;
+  margin-bottom: 5em;
   padding-top: 0;
   padding-bottom: 0;
 }
-.grid__cell--span-6{
-  padding: 2em 2em 4em 2em;
-  background-color: #ccc;
-}
+
 @media (min-width: 840px){
   .grid__cell--span-6{
     grid-column-start: 4;

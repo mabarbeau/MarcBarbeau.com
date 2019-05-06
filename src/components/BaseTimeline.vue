@@ -1,8 +1,8 @@
 <template>
-  <div class="grid">
-    <div class="timeline">
+  <div class="bg-gray">
+    <div class="grid timeline">
       <article>
-        <div class="bg-gray">
+        <div class="timeline-item">
           <h3>2017</h3>
           <p>
             Lorem ipsum dolor sit amet, quo ei simul congue exerci,
@@ -12,7 +12,7 @@
         </div>
       </article>
       <article>
-        <div class="bg-gray">
+        <div class="timeline-item">
           <h3>2017</h3>
           <p>
             Lorem ipsum dolor sit amet, quo ei simul congue exerci,
@@ -28,7 +28,7 @@
         </div>
       </article>
       <article>
-        <div class="bg-gray">
+        <div class="timeline-item">
           <h3>2017</h3>
           <p>
             Lorem ipsum dolor sit amet, quo ei simul congue exerci,
@@ -39,7 +39,7 @@
         </div>
       </article>
       <article>
-        <div class="bg-gray">
+        <div class="timeline-item">
           <h3>2017</h3>
           <p>
             Lorem ipsum dolor sit amet, quo ei simul congue exerci,
@@ -94,7 +94,7 @@ export default {
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #ccc;
+  background-color: $white;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -103,7 +103,7 @@ export default {
 .timeline article{
   width: 50%;
   margin-bottom: 10em;
-  border-top: 4px solid #ccc;
+  border-top: 4px solid $white;
   position: relative;
   &:after{
     content: "";
@@ -112,14 +112,14 @@ export default {
     position: absolute;
     top: -15px;
     border-radius: 100%;
-    background-color: red;
+    background-color: $primary;
     z-index: 1;
   }
 }
-.timeline article div{
+.timeline .timeline-item{
+  background-color: $white;
   padding: 3em 4em 2em 2em;
   position: relative;
-  top: -6em;
 }
 .timeline article:nth-child(2){
   margin-top: 15em;
