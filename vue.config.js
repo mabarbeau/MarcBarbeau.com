@@ -16,7 +16,7 @@ function addStyleResource (rule) {
     .options({
       includePaths: ['node_modules'],
       data: `
-          @import "@/styles /imports.scss";
+          @import "@/styles/imports.scss";
         `
     })
 }
