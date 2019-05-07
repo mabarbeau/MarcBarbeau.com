@@ -3,71 +3,88 @@
     <div class="grid timeline">
       <article>
         <div class="timeline-item">
-          <h3>2017</h3>
+          <h3>
+            2017
+            <small>
+              Started at Booj
+            </small>
+          </h3>
           <p>
-            Lorem ipsum dolor sit amet, quo ei simul congue exerci,
-            ad nec admodum perfecto mnesarchum. Te elit voluptua
-            dignissim per, habeo iusto primis ea eam.
+            <strong>B</strong>e
+            <strong>O</strong>riginal
+            <strong>O</strong>r
+            <strong>J</strong>ealous
           </p>
         </div>
       </article>
       <article>
         <div class="timeline-item">
-          <h3>2017</h3>
+          <h3>
+            2015
+            <small>
+              First paying role.
+            </small>
+          </h3>
           <p>
-            Lorem ipsum dolor sit amet, quo ei simul congue exerci,
-            ad nec admodum perfecto mnesarchum, vim ea mazim fierent
-            detracto. Ea quis iuvaret expetendis his, te elit voluptua
-            dignissim per, habeo iusto primis ea eam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, quo ei simul congue exerci,
-            ad nec admodum perfecto mnesarchum, vim ea mazim fierent
-            detracto. Ea quis iuvaret expetendis his.
+            My first paying gig was for Peloton Digital Agency. I was hired on
+            as the third employee of a newly founded start up.
           </p>
         </div>
       </article>
       <article>
         <div class="timeline-item">
-          <h3>2017</h3>
+          <h3>
+            2013
+            <small>
+              Graduated College
+            </small>
+          </h3>
           <p>
-            Lorem ipsum dolor sit amet, quo ei simul congue exerci,
-            ad nec admodum perfecto mnesarchum, vim ea mazim fierent
-            detracto. Ea quis iuvaret expetendis his, te elit voluptua
-            dignissim per, habeo iusto primis ea eam.
+            I graduated Fort Lewis College with a Bachlors in Computer Science
+            Information Systems.
           </p>
         </div>
       </article>
       <article>
         <div class="timeline-item">
-          <h3>2017</h3>
+          <h3>
+            2004
+            <small>
+              First Website
+            </small>
+          </h3>
           <p>
-            Lorem ipsum dolor sit amet, quo ei simul congue exerci,
-            ad nec admodum perfecto mnesarchum.
+            I was first intruduced to HTML in middle school. During lunch, my school
+            offered a basic programming class. The instructor taught us the basics
+            of HTML and deminstrated how to view the source code behind any website.
+          </p>
+          <p>
+            This gave me an idea. I began by scraping source code from the schools
+            website. Next, I reassibmled the website with my own, middle school
+            humor, content. Once I had it working, I attempted to trick my friends.
+          </p>
+          <p>
+            "Ew, dirty socks for lunch today." I exclamed pointing at my newly
+            created lunch menu. I've been glued to the computer ever since.
+          </p>
+        </div>
+      </article>
+      <article>
+        <div class="timeline-item">
+          <h3>
+            1990
+            <small>
+              Born in Colorado
+            </small>
+          </h3>
+          <p>
+            That makes me an english speaking american citizan.
           </p>
         </div>
       </article>
     </div>
   </div>
 </template>
-<!-- <dl class="timeline">
-  <dt>
-    First line of code
-  </dt>
-  <dd>2012</dd>
-  <dt>
-    First Website
-  </dt>
-  <dd>2013</dd>
-  <dt>
-    Graduated
-  </dt>
-  <dd>2013</dd>
-  <dt>
-    First Professinal Web Develoment Role
-  </dt>
-  <dd>2015</dd>
-</dl> -->
 
 <script>
 export default {
@@ -76,6 +93,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h3{
+  letter-spacing: 0.12em;
+  display: inline-block;
+  text-align: center;
+}
+small{
+  display: block;
+  text-align: center;
+}
 .grid{
   padding-top: 0;
 }
@@ -110,9 +136,10 @@ export default {
     width: 30px;
     height: 30px;
     position: absolute;
-    top: -15px;
+    top: -19px;
     border-radius: 100%;
-    background-color: $primary;
+    background-color: $white;
+    border: 4px solid $primary;
     z-index: 1;
   }
 }
@@ -130,7 +157,7 @@ export default {
     margin-right: 5em;
   }
   &:after{
-    right: -15px;
+    right: -19px;
   }
 }
 .timeline article:nth-child(even){
@@ -139,7 +166,8 @@ export default {
     margin-left: 5em;
   }
   &:after{
-    left: -15px;
+    left: -19px;
   }
 }
+
 </style>

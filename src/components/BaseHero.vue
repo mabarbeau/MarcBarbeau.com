@@ -1,23 +1,9 @@
 <template>
   <section class="hero">
-    <div class="foreground">
-      <img src="../assets/MarcBarbeau.jpeg" alt="Marc Barbeau" width="268" height="268">
-      <p>
-        <span class="h3">
-          Hello, I am Marc.
-        </span>
-        <span class="h4">
-          Front End Developer based in the Seattle area.
-        </span>
-        <span class="h5">
-          I am passionate about building eligant interfaces that are engaging and performant.
-        </span>
-      </p>
-      <div>
-        <a class="btn btn--unelevated" href="#about">
-          My Story
-        </a>
-      </div>
+    <div class="foreground grid">
+      <h2 class="h3">
+        Hello, I am Marc.
+      </h2>
     </div>
     <div class="backdrop"></div>
   </section>
@@ -30,31 +16,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  img{
-    border-radius: 100%;
-  }
   .hero{
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 0;
+    height: 65vh;
   }
   .h3{
     margin-top: .5em;
     margin-bottom: 0;
   }
+  .h4{
+    margin: 0;
+  }
   .h5{
     margin-top: 0;
-    margin-bottom: .5em;
-    letter-spacing: .08em;
-    display: block;
   }
   .foreground{
-    background-color: #fff;
     text-align: center;
-    padding: 50px 60px 25px 60px;
-    border: 1px solid #ddd;
   }
   .backdrop{
     z-index: -1;
