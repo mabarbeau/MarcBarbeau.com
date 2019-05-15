@@ -1,8 +1,8 @@
 <template>
     <footer>
-      <a href="#">Source code</a>
+      <a href="https://github.com/mabarbeau/marcbarbeau.com/">Source code</a>
       <p>
-        Copyright (c) 2019 Copyright Holder All Rights Reserved.
+        Copyright (c) 2019 Copyright Marc Barbeau All Rights Reserved.
       </p>
     </footer>
 </template>
