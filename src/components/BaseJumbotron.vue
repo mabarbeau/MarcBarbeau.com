@@ -2,9 +2,15 @@
   <div class="jumbotron grid">
     <div class="grid__inner">
       <div class="grid__cell--span-4">
-          <img src="../assets/MarcBarbeau.jpeg" alt="Marc Barbeau" width="268" height="268">
+          <img
+            class="jumbotron-image"
+            src="../assets/MarcBarbeau.jpeg"
+            alt="Marc Barbeau"
+            width="268"
+            height="268"
+          >
       </div>
-      <div class="grid__cell--span-8">
+      <div class="grid__cell--span-8 jumbotron-copy">
         <h2>My Story</h2>
         <p>
             I am a <strong>Front End Developer</strong> based in the Seattle area.
@@ -22,11 +28,12 @@
 </template>
 
 <style>
-.jumbotron{
-  margin-top: 5em;
-  margin-bottom: 5em;
-  padding-top: 0;
-  padding-bottom: 0;
+.jumbotron.grid{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   max-width: 872px;
+}
+.jumbotron-copy{
+  margin-left: 2rem;
 }
 </style>
