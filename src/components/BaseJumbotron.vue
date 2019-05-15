@@ -19,8 +19,8 @@
         </p>
         <p>
           I have been programming professinaly since February 2015. However,
-          my passion technology started at a much yonger age. Read more about
-          how it all got started below.
+          my passion for technology started at a much yonger age. Read more
+          about how it all got started below.
         </p>
       </div>
     </div>
