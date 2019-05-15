@@ -21,6 +21,6 @@ export default {
 </script>
 <style>
 #app{
-  margin-top: 84px;
+  /* margin-top: 84px; */
 }
 </style>

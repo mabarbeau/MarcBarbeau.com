@@ -5,7 +5,6 @@
         Hello, I am Marc.
       </h2>
     </div>
-    <div class="backdrop"></div>
   </section>
 </template>
 
@@ -17,11 +16,17 @@ export default {
 
 <style lang="scss" scoped>
   .hero{
+    background-image: url('../assets/hero-background.jpg');
+    background-color: $gray;
+    color: $white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 65vh;
+    height: 30rem;
   }
   .h3{
     margin-top: .5em;
@@ -36,16 +41,4 @@ export default {
   .foreground{
     text-align: center;
   }
-  .backdrop{
-    z-index: -1;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #ccc;
-  }
-
 </style>
