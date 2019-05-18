@@ -14,26 +14,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-header{
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  background-color: white;
-}
-h1{
-  display: inline-block;
-}
+footer{
 
-ul{
-  list-style: none;
-  text-align: center;
-  margin-top: 10px;
-  padding: 0;
-  li{
-    display: inline-block;
-  }
 }
 </style>
