@@ -1,8 +1,8 @@
+import * as firebase from 'firebase/app';
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import './styles/main.scss';
-import * as firebase from 'firebase/app';
 
 require('firebase/firestore');
 
