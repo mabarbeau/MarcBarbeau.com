@@ -50,17 +50,17 @@
 <script>
 
 function writeMessage(name, email, message) {
-  window.db.collection("messages").add({
+  window.db.collection('messages').add({
     name,
     email,
-    message
+    message,
   })
-  .then(function(docRef) {
-    console.log("Document written with ID: ", docRef.id);
-  })
-  .catch(function(error) {
-    console.error("Error adding document: ", error);
-  });
+    .then((docRef) => {
+      console.log('Document written with ID: ', docRef.id);
+    })
+    .catch((error) => {
+      console.error('Error adding document: ', error);
+    });
 }
 
 export default {
