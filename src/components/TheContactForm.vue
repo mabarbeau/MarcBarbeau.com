@@ -1,7 +1,19 @@
 <template>
   <div class="bg-gray">
-    <form @submit.prevent="onSubmit" id="contact" class="grid bg-white" action="#" method="post">
+    <form @submit.prevent="onSubmit" id="contact" class="grid bg-white">
       <h2>Let's Start a Conversation.</h2>
+      <p v-if="errors.length">
+        <b>Please correct the following error(s):</b>
+        <ul>
+          <li
+            v-for="(error, index) in errors"
+            :key="index"
+            :title="'Error ' + (index + 1)"
+          >
+            {{ error }}
+          </li>
+        </ul>
+      </p>
       <div class="grid__inner">
         <div class="grid__cell--span-8">
           <label class="shown" for="name">Name</label>
@@ -55,22 +67,51 @@ function writeMessage(name, email, message) {
     email,
     message,
   })
-  .then((docRef) => {
-    console.log('Document written with ID: ', docRef.id);
-  })
-  .catch((error) => {
-    console.error('Error adding document: ', error);
-  });
+    .then((docRef) => {
+      console.log('Document written with ID: ', docRef.id);
+    })
+    .catch((error) => {
+      console.error('Error adding document: ', error);
+    });
 }
 
 export default {
   name: 'TheContactForm',
   data() {
-    return { name: null, email: null, message: null };
+    return {
+      errors: [],
+      name: null,
+      email: null,
+      message: null,
+    };
   },
   methods: {
-    onSubmit() {
-      writeMessage(this.name, this.email, this.message);
+    onSubmit(e) {
+      this.errors = [];
+
+      if (!this.name) {
+        this.errors.push('Name required.');
+      }
+      if (!this.email) {
+        this.errors.push('Email required.');
+      } else if (!this.validEmail(this.email)) {
+        this.errors.push('Valid email required.');
+      }
+
+      if (!this.message) {
+        this.errors.push('Message required.');
+      }
+
+      if (!this.errors.length) {
+        writeMessage(this.name, this.email, this.message);
+      }
+
+      e.preventDefault();
+    },
+    validEmail(email) {
+      // eslint-disable-next-line
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
     },
   },
 };
