@@ -1,10 +1,10 @@
 <template>
-    <footer>
-      <a href="https://github.com/mabarbeau/marcbarbeau.com/">Source code</a>
-      <p>
-        Copyright (c) 2019 Copyright Marc Barbeau All Rights Reserved.
-      </p>
-    </footer>
+  <footer>
+    <a href="https://github.com/mabarbeau/marcbarbeau.com/">Source code</a>
+    <p>
+      Copyright (c) 2019 Copyright Marc Barbeau All Rights Reserved.
+    </p>
+  </footer>
 </template>
 
 <script>

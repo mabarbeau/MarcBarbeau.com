@@ -1,10 +1,10 @@
 @mixin color($name, $color) {
-	.#{$name}{
-		color: $color;
-	}
-	.bg-#{$name}{
-		background-color: $color;
-	}
+  .#{$name}{
+    color: $color;
+  }
+  .bg-#{$name}{
+    background-color: $color;
+  }
 }
 /**
  * Colors
@@ -36,8 +36,8 @@
 .bg-danger,
 .bg-danger-dark,
 .bg-black{
-	color: $white;
+  color: $white;
 }
 body{
-	background-color: $white;
+  background-color: $white;
 }
