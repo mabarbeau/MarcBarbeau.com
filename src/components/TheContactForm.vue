@@ -55,17 +55,20 @@
           </button>
         </div>
       </div>
+
     </form>
   </div>
 </template>
 
 <script>
+import { load } from 'recaptcha-v3';
 
-function writeMessage(name, email, message) {
+function writeMessage(name, email, message, token) {
   window.db.collection('messages').add({
     name,
     email,
     message,
+    token,
   })
     .then((docRef) => {
       console.log('Document written with ID: ', docRef.id);
@@ -83,7 +86,15 @@ export default {
       name: null,
       email: null,
       message: null,
+      token: null,
     };
+  },
+  created() {
+    load('6LeCRKQUAAAAAGVLfnI6osDOX5O3TVIhHI31dkUM').then((recaptcha) => {
+      recaptcha.execute().then((token) => {
+        this.token = token;
+      });
+    });
   },
   methods: {
     onSubmit(e) {
@@ -103,7 +114,7 @@ export default {
       }
 
       if (!this.errors.length) {
-        writeMessage(this.name, this.email, this.message);
+        writeMessage(this.name, this.email, this.message, this.token);
       }
 
       e.preventDefault();
