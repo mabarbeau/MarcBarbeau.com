@@ -17,11 +17,11 @@
           I am passionate about building eligant interfaces that are engaging
           and performant.
         </p>
-        <p>
+        <!-- <p>
           I have been programming professinaly since February 2015. However,
-          my passion for technology started at a much yonger age. Read more
-          about how it all got started below.
-        </p>
+          my passion for technology started at a much yonger age.
+          Read more about how it all got started below.
+        </p> -->
       </div>
     </div>
   </div>

@@ -6,9 +6,9 @@
     <section id="about">
       <BaseJumbotron/>
 
-      <BaseTimeline/>
+      <!-- <BaseTimeline/> -->
 
-      <article class="grid">
+      <!-- <article class="grid">
          <h3>Skills</h3>
         <div class="grid__inner">
           <div class="grid__cell">
@@ -61,13 +61,13 @@
             </ul>
           </div>
         </div>
-      </article>
+      </article> -->
 
     </section>
 
-    <section id="work">
+    <!-- <section id="work">
       <BaseCardList/>
-    </section>
+    </section> -->
 
     <section id="contact">
       <TheContactForm/>
@@ -79,8 +79,8 @@
 <script>
 
 import BaseHero from '../components/BaseHero.vue';
-import BaseCardList from '../components/BaseCardList.vue';
-import BaseTimeline from '../components/BaseTimeline.vue';
+// import BaseCardList from '../components/BaseCardList.vue';
+// import BaseTimeline from '../components/BaseTimeline.vue';
 import BaseJumbotron from '../components/BaseJumbotron.vue';
 import TheContactForm from '../components/TheContactForm.vue';
 
@@ -89,8 +89,8 @@ export default {
   name: 'home',
   components: {
     BaseHero,
-    BaseCardList,
-    BaseTimeline,
+    // BaseCardList,
+    // BaseTimeline,
     BaseJumbotron,
     TheContactForm,
   },
