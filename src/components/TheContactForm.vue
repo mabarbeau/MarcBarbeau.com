@@ -92,7 +92,7 @@ export default {
         recaptcha.execute().then((token) => {
           this.token = token;
         });
-      }).catch( () => {
+      }).catch(() => {
         this.errors.push('Recaptcha failed.');
       });
 
