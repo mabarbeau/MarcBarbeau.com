@@ -10,7 +10,7 @@
             :key="index"
             :title="'Error ' + (index + 1)"
           >
-            {{ error }}
+            {{ error.message }}
           </li>
         </ul>
       </p>
@@ -93,24 +93,41 @@ export default {
           this.token = token;
         });
       }).catch(() => {
-        this.errors.push('Recaptcha failed.');
+        this.errors.push({
+          target: '[name=name]',
+          message: 'Recaptcha failed.',
+        });
       });
 
       if (!this.name) {
-        this.errors.push('Name required.');
+        this.errors.push({
+          target: '[name=name]',
+          message: 'Name required.',
+        });
       }
       if (!this.email) {
-        this.errors.push('Email required.');
+        this.errors.push({
+          target: '[name=email]',
+          message: 'Email required.',
+        });
       } else if (!this.validEmail(this.email)) {
-        this.errors.push('Valid email required.');
+        this.errors.push({
+          target: '[name=email]',
+          message: 'Valid email required.',
+        });
       }
 
       if (!this.message) {
-        this.errors.push('Message required.');
+        this.errors.push({
+          target: '[name=message]',
+          message: 'Message required.',
+        });
       }
 
       if (!this.errors.length) {
         writeMessage(this.name, this.email, this.message, this.token);
+      } else {
+        document.querySelector(this.errors[0].target).focus();
       }
 
       e.preventDefault();
