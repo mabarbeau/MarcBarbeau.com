@@ -70,13 +70,7 @@ function writeMessage(name, email, message, token) {
     email,
     message,
     token,
-  })
-    .then((response) => {
-      console.log(response);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  });
 }
 
 export default {
@@ -98,9 +92,8 @@ export default {
         recaptcha.execute().then((token) => {
           this.token = token;
         });
-      }).catch((error) => {
+      }).catch( () => {
         this.errors.push('Recaptcha failed.');
-        console.error(error);
       });
 
       if (!this.name) {
