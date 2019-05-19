@@ -99,7 +99,8 @@ export default {
           this.token = token;
         });
       }).catch((error) => {
-        this.errors.push('Recaptcha failed');
+        this.errors.push('Recaptcha failed.');
+        console.error(error);
       });
 
       if (!this.name) {
