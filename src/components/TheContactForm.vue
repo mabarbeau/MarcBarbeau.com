@@ -61,20 +61,21 @@
 </template>
 
 <script>
+import axios from 'axios';
 import { load } from 'recaptcha-v3';
 
 function writeMessage(name, email, message, token) {
-  window.db.collection('messages').add({
+  axios.post('https://us-central1-marcbarbeau.cloudfunctions.net/checkRecaptcha', {
     name,
     email,
     message,
     token,
   })
-    .then((docRef) => {
-      console.log('Document written with ID: ', docRef.id);
+    .then((response) => {
+      console.log(response);
     })
     .catch((error) => {
-      console.error('Error adding document: ', error);
+      console.log(error);
     });
 }
 
@@ -89,16 +90,17 @@ export default {
       token: null,
     };
   },
-  created() {
-    load('6LeCRKQUAAAAAGVLfnI6osDOX5O3TVIhHI31dkUM').then((recaptcha) => {
-      recaptcha.execute().then((token) => {
-        this.token = token;
-      });
-    });
-  },
   methods: {
     onSubmit(e) {
       this.errors = [];
+
+      load('6LeCRKQUAAAAAGVLfnI6osDOX5O3TVIhHI31dkUM').then((recaptcha) => {
+        recaptcha.execute().then((token) => {
+          this.token = token;
+        });
+      }).catch((error) => {
+        this.errors.push('Recaptcha failed');
+      });
 
       if (!this.name) {
         this.errors.push('Name required.');
