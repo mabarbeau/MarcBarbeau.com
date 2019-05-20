@@ -3,6 +3,8 @@
 
     <BaseHero/>
 
+    <TheNav/>
+
     <section id="about">
       <BaseJumbotron/>
 
@@ -79,6 +81,7 @@
 <script>
 
 import BaseHero from '../components/BaseHero.vue';
+import TheNav from '../components/TheNav.vue';
 // import BaseCardList from '../components/BaseCardList.vue';
 // import BaseTimeline from '../components/BaseTimeline.vue';
 import BaseJumbotron from '../components/BaseJumbotron.vue';
@@ -89,6 +92,7 @@ export default {
   name: 'home',
   components: {
     BaseHero,
+    TheNav,
     // BaseCardList,
     // BaseTimeline,
     BaseJumbotron,
