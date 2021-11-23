@@ -1,43 +1,22 @@
 # marcbarbeau.com
 
-Note this project is in active development. It will eventually replace https://www.marcbarbeau.com/
+> Homepage of Marc Barbeau
 
-View on github https://mabarbeau.github.io/marcbarbeau.com/
+## Build Setup
 
-## Project setup
-```
-npm install
-```
+```bash
+# install dependencies
+$ yarn install
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# serve with hot reload at localhost:3000
+$ yarn dev
 
-### Compiles and minifies for production
-```
-npm run build
-```
+# build for production and launch server
+$ yarn build
+$ yarn start
 
-### Run your tests
-```
-npm run test
+# generate static project
+$ yarn generate
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
