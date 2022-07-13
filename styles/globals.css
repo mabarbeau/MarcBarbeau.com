@@ -1,0 +1,28 @@
+html,
+body {
+  background-color: rgb(248, 248, 248);
+  padding: 0;
+  margin: 0;
+  font-family: Lora;
+  min-width: 670px;
+}
+
+body {
+  width: 670px;
+  margin: auto;
+  padding: 1rem;
+}
+
+a {
+  color: #0070f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: Cormorant;
+  font-size: 5rem;
+  line-height: 5rem;
+}

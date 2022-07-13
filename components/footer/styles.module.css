@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2rem;
+}
+
+
+.logo {
+  margin-left: 2px;
+  margin-top: 6px;
+}

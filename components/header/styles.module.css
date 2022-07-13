@@ -1,0 +1,38 @@
+.heading {
+  padding: 2em 1em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.heading small{
+  color: #555;
+  font-size: 2rem;
+}
+
+.heading h1{
+  color: rgb(67 67 67);
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.05em;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.heading h1 > span{
+  padding: 0 8px;
+}
+
+.heading small{
+  border-top: 6px solid rgb(102, 102, 102);
+  display: block;
+  text-transform: uppercase;
+  line-height: 1.6em;
+  color: rgb(102, 102, 102);
+}
+
+
+.heading:hover h1,
+.heading:focus h1,
+.heading:active  h1{
+  color: #0070f3;
+  border-color: #0070f3;
+}

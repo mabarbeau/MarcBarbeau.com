@@ -1,0 +1,3 @@
+.document > div:first-of-type{
+  display: none;
+}
