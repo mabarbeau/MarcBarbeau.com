@@ -16,7 +16,6 @@ const Home: NextPage<Props> = ({ head, htmlString }) => {
     <>
       <Head>
         <title>Marc Barbeau | CV</title>
-        <div dangerouslySetInnerHTML={{ __html: head }}></div>
         <meta
           name="description"
           content="Resume from Marc Barbeau, Software Engineer, specializing in front-end web applications."
@@ -50,6 +49,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     .then(({ data }) => data as string);
 
   const $ = load(htmlString);
+
+  console.log($("head").html());
 
   return {
     props: {
