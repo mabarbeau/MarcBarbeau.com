@@ -15,7 +15,7 @@ function millisecondsToYear(mSeconds: number) {
   return checkYear;
 }
 
-const Home: NextPage<Props> = ({ head, htmlString }) => {
+const Home: NextPage<Props> = ({ htmlString }) => {
   const date = Date.now() - Date.parse("Feb, 2015");
 
   return (
@@ -28,8 +28,6 @@ const Home: NextPage<Props> = ({ head, htmlString }) => {
             date
           )} years industry experience.`}
         />
-        <link rel="icon" href="/favicon.ico" />
-        <div dangerouslySetInnerHTML={{ __html: head }} />
       </Head>
       <main dangerouslySetInnerHTML={{ __html: htmlString }} />
     </>
