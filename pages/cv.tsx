@@ -27,9 +27,6 @@ const Home: NextPage<Props> = ({ head, htmlString }) => {
           className={styles.document}
           dangerouslySetInnerHTML={{ __html: htmlString }}
         ></div>
-        {/* <button>Preview on Google</button>
-        <button>Print</button>
-        <button>Download</button> */}
       </main>
     </>
   );
@@ -48,14 +45,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
     })
     .then(({ data }) => data as string);
 
-  const $ = load(htmlString);
-
-  console.log($("head").html());
-
   return {
     props: {
-      head: $("head").html(),
-      htmlString: $("body").html(),
+      htmlString: load(htmlString)("body").html(),
     },
   };
 };
