@@ -18,7 +18,7 @@ const Home: NextPage<Props> = ({ head, htmlString }) => {
         <title>Marc Barbeau | CV</title>
         <meta
           name="description"
-          content="Resume from Marc Barbeau, Software Engineer, specializing in front-end web applications."
+          content="Resume for Marc Barbeau, Software Engineer, specializing in front-end web applications."
         />
       </Head>
       <main>
